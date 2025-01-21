@@ -49,3 +49,10 @@ class Token_data(BaseModel):
 class Vote(BaseModel):
     post_id: int
     dir: conint(le=1)
+
+class postresponse(Post):
+    post: PostResponse
+    votes: int
+
+    class Config:
+        form_attributes = True
